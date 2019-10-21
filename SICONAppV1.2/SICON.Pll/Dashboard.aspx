@@ -25,7 +25,7 @@
             
              <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html"><p class="navbar-brand mb-0 text-white"><i class="fa d-inline fa-lg fa-stop-circle"></i> S I C O N </p></a>
+    <a class="navbar-brand mr-1" href="Index.aspx"><p class="navbar-brand mb-0 text-white"><i class="fa d-inline fa-lg fa-stop-circle"></i> S I C O N </p></a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -132,7 +132,7 @@
           <li class="breadcrumb-item active">¡Bienvenido!</li>
         </ol>
 
-          <h1>¡Adios salas!</h1>
+          <h1>¡BIENVENIDO A SICON!</h1>
 
       </div>
 
