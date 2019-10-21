@@ -1,0 +1,6 @@
+C:\Users\def00\Desktop\Proyecto 2.0\SICONAppV1.2\SICON.Dll\bin\Debug\SICON.Dll.dll
+C:\Users\def00\Desktop\Proyecto 2.0\SICONAppV1.2\SICON.Dll\bin\Debug\SICON.Dll.pdb
+C:\Users\def00\Desktop\Proyecto 2.0\SICONAppV1.2\SICON.Dll\obj\Debug\SICON.Dll.csprojAssemblyReference.cache
+C:\Users\def00\Desktop\Proyecto 2.0\SICONAppV1.2\SICON.Dll\obj\Debug\SICON.Dll.csproj.CoreCompileInputs.cache
+C:\Users\def00\Desktop\Proyecto 2.0\SICONAppV1.2\SICON.Dll\obj\Debug\SICON.Dll.dll
+C:\Users\def00\Desktop\Proyecto 2.0\SICONAppV1.2\SICON.Dll\obj\Debug\SICON.Dll.pdb
