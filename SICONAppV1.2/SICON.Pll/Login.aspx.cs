@@ -49,8 +49,8 @@ namespace SICON.Pll
                         if ((usus == caja[0].ToString()) && (clave == caja[1].ToString()))
                         {//si es valido
                             FormsAuthentication.SetAuthCookie(usus, false);
-                            Response.Redirect("Index.aspx");
 
+                            Response.Redirect("SICON/Index.aspx");
                         }
                         else
                         {
