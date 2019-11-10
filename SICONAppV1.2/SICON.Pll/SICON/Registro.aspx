@@ -29,19 +29,19 @@
 					<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingresa un nombre de usuario" ControlToValidate="txtUserName"></asp:RequiredFieldValidator>
 					<asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
 
-                    <label for="">Tu Nombre</label>
-					<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Ingresa un nombre de usuario" ControlToValidate="txtUserName"></asp:RequiredFieldValidator>
+					<label for="">Nombres</label>
+					<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtName"></asp:RequiredFieldValidator>
 					<asp:TextBox ID="txtName" runat="server"></asp:TextBox>
 
 					<label for="">Apellidos</label>
-					<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Correo invalido" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
-					<asp:TextBox ID="txtApe" runat="server"></asp:TextBox>
+					<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtApell"></asp:RequiredFieldValidator>
+					<asp:TextBox ID="txtApell" runat="server"></asp:TextBox>
 
 					<label for="">Contraseña</label>
 					<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Contraseña invalida" ControlToValidate="txtPass"></asp:RequiredFieldValidator>
-					<asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
+					<asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
 
-                    <asp:Button ID="btnRegis" type="submit" runat="server" Text="Registrarse" />
+					<asp:Button ID="btnRegis" runat="server" Text="Registrarse" CssClass="btn" OnClick="btnRegis_Click1" />
 				</form>
 
 				<span class="text-footer">¿Ya te has registrado?
