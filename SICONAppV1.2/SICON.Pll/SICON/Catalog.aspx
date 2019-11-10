@@ -77,7 +77,7 @@
           <asp:Label ID="UserLbl" runat="server" Text="." class="dropdown-item"></asp:Label>
             <div class="dropdown-divider"></div>
 
-          <asp:Button ID="UpdateBtn" runat="server" Text="Editar Perfil" class="dropdown-item"/>
+          <asp:Button ID="UpdateBtn" runat="server" Text="Editar Perfil" class="dropdown-item" OnClick="UpdateBtn_Click"/>
           <asp:Button ID="ControlBtn" runat="server" Text="Panel de control" class="dropdown-item" OnClick="ControlBtn_Click" />
             
             <asp:Button ID="IniciarBtn" runat="server" Text="Inciar Sesión" class="dropdown-item" OnClick="IniciarBtn_Click" />

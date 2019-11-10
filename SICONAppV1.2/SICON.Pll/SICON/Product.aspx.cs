@@ -53,5 +53,10 @@ namespace SICON.Pll.SICON
         {
             Response.Redirect(@"../login.aspx");
         }
+
+        protected void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(@"../EditProfile.aspx");
+        }
     }
 }

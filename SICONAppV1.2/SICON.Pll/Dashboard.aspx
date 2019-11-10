@@ -40,39 +40,14 @@
 
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-bell fa-fw"></i>
-          <%--<span class="badge badge-danger">9+</span>--%>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-envelope fa-fw"></i>
-         <%-- <span class="badge badge-danger">7</span>--%>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown no-arrow">
+     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#">Settings</a>
-          <a class="dropdown-item" href="#">Activity Log</a>
+          <asp:Button ID="UpdateBtn" runat="server" Text="Editar Perfil" class="dropdown-item" OnClick="UpdateBtn_Click"/>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout eeee</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a>
         </div>
       </li>
     </ul>
@@ -96,23 +71,24 @@
           <span>Productos</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Productos :</h6>
-          <a class="dropdown-item" href="login.html">Agregar Productos</a>
-          <a class="dropdown-item" href="register.html">Ver prodcutos</a>
-          <a class="dropdown-item" href="forgot-password.html">Ordenes</a>
+          <h6 class="dropdown-header">Productos :</h6> 
+          <a class="dropdown-item" href="">Agregar Productos</a>
+          <a class="dropdown-item" href="">Ver prodcutos</a>
+          <a class="dropdown-item" href="">Ordenes</a>
           <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Catalogo:</h6>
-          <a class="dropdown-item" href="404.html">Catalogo</a>
-          <a class="dropdown-item" href="blank.html">Productos</a>
+          <a class="dropdown-item" href="">Catalogo</a>
+          <a class="dropdown-item" href="">Productos</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Custom Pagina</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+
+        <a class="nav-link" href="Users.aspx">
           <i class="fas fa-fw fa-table"></i>
           <span>Usuarios</span></a>
       </li>
@@ -132,7 +108,8 @@
           <li class="breadcrumb-item active">¡Bienvenido!</li>
         </ol>
 
-          <h1>¡BIENVENIDO A SICON!</h1>
+       <h1><asp:Label ID="UserLbl" runat="server" Text="." class="dropdown-item"></asp:Label></h1><h1> BIENVENIDO A SICON!</h1>
+
 
       </div>
 
@@ -160,15 +137,15 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">¿De verdad te quieres ir?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Selecciono "Cerrar Sesion" esta seguro de cerrar sesión.</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <asp:Button ID="CerrarSesionBtn" runat="server" Text="Cerrar Sesión" class="btn btn-primary" OnClick="CerrarSesionBtn_Click" />
         </div>
       </div>
     </div>
