@@ -78,14 +78,14 @@
             <div class="dropdown-divider"></div>
 
           <asp:Button ID="UpdateBtn" runat="server" Text="Editar Perfil" class="dropdown-item"/>
-          <asp:Button ID="ControlBtn" runat="server" Text="Panel de control" class="dropdown-item"/>
+          <asp:Button ID="ControlBtn" runat="server" Text="Panel de control" class="dropdown-item" OnClick="ControlBtn_Click" />
             
-            <asp:Button ID="IniciarBtn" runat="server" Text="Inciar Sesión" class="dropdown-item" />
+            <asp:Button ID="IniciarBtn" runat="server" Text="Inciar Sesión" class="dropdown-item" OnClick="IniciarBtn_Click" />
 
 
             <div class="dropdown-divider"></div>
 
-        <asp:Button ID="CerrarSesionBtn" runat="server" Text="Cerrar Sesión" class="dropdown-item" />
+        <asp:Button ID="CerrarSesionBtn" runat="server" Text="Cerrar Sesión" class="dropdown-item" OnClick="CerrarSesionBtn_Click" />
 
         </div>
       </li>
@@ -175,7 +175,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card">
-                <img class="card-img-top" src="img/07.jpg" alt="Card image cap">
+                  <asp:Image ID="CatalogImg01" class="card-img-top" src="../img/07.jpg" alt="Card image cap" runat="server" />
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">MESA</li>
                   <li class="list-group-item"></li>
@@ -185,9 +185,9 @@
                   <a href="Product.aspx" class="btn btn-outline-warning">
                     <i class="fas fa-shopping-bag"></i>
                   </a>
-                  <a href="Producto.php" class="btn btn-outline-warning">
+                  <%--<a href="Producto.aspx" class="btn btn-outline-warning">
                     <i class="fas fa-question-circle"></i>
-                  </a>
+                  </a>--%>
                   <!--<a href="#" class="card-link">Another link</a>-->
                 </div>
               </div>

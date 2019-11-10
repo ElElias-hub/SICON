@@ -95,13 +95,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <asp:Image ID="ImageSlide01" class="d-block w-100" src="img/01.jpg" alt="First slide" runat="server" Width="200px" />
+      <asp:Image ID="ImageSlide01" class="d-block w-100" src="../img/01.jpg" alt="First slide" runat="server" Width="200px" />
     </div>
     <div class="carousel-item">
-        <asp:Image ID="ImageSlide02" class="d-block w-100" src="img/02.jpg" alt="Second slide" runat="server" Width="200px" />
+        <asp:Image ID="ImageSlide02" class="d-block w-100" src="../img/13.jpg" alt="Second slide" runat="server" Width="200px" />
     </div>
     <div class="carousel-item">
-        <asp:Image ID="ImageSlide03" class="d-block w-100" src="img/03.jpg" alt="Third slide" runat="server" Width="200px" />
+        <asp:Image ID="ImageSlide03" class="d-block w-100" src="../img/14.jpg" alt="Third slide" runat="server" Width="200px" />
 
     </div>
   </div>
@@ -132,7 +132,9 @@
               
               <h3>Proyecto One</h3>
               <p class="my-3">Among the tall grass by the trickling stream; and, as I lie close to the earth.</p>
-             <img class="card-img-top" src="img/04.jpg" alt="Card image cap">
+                <asp:Image ID="CardImg01" class="card-img-top" src="../img/04.jpg" alt="Card image cap" runat="server" />
+
+
               <h2>  </h2> <a class="btn btn-warning mt-3" href="#">Ver más</a>
             </div>
           </div>
@@ -143,7 +145,7 @@
             <div class="card-body p-4">
               <h3>Proyecto Two</h3>
               <p class="my-3">I am alone, and feel the charm of existence in this spot.</p>
-                <img class="card-img-top" src="img/03.jpg" alt="Card image cap">
+                <asp:Image ID="CardImg02" class="card-img-top" src="../img/03.jpg" alt="Card image cap" runat="server" />
               <h2> </h2> <a class="btn btn-warning mt-3" href="#">Ver más</a>
             </div>
           </div>
@@ -152,8 +154,8 @@
           <div class="card text-center text-dark">
             <div class="card-body p-4">
               <h3>Proyecto Three</h3>
-              <p class="my-3">The breath of that universal love which bears and sustains us.</p>
-                <img class="card-img-top" src="img/11.jpg" alt="Card image cap">
+              <p class="my-3">The breath of that universal love which bears and sustains us.</p>    
+                <asp:Image ID="CardImg03" class="card-img-top" src="../img/11.jpg" alt="Card image cap" runat="server" />
               <h2>  </h2> <a class="btn btn-warning mt-3" href="#">Ver más</a>
             </div>
           </div>
@@ -162,7 +164,7 @@
     </div>
   </div>
 
-<div class="py-5"  style="background-image: url(img/07.jpg);position:relative;background-position:center center;background-size:cover;">
+<div class="py-5"  style="background-image: url(../img/07.jpg);position:relative;background-position:center center;background-size:cover;">
     <div class="container">
       <div class="row">
         <div class="mx-auto col-md-8 text-center">
@@ -172,7 +174,8 @@
       </div>
       <div class="row">
         <div class="col-lg-3 col-6 p-3">
-          <div class="card"> <img class="card-img-top" src="img/06.jpg" alt="Card image cap">
+          <div class="card"> 
+              <asp:Image ID="CardImg04" class="card-img-top" src="../img/06.jpg" alt="Card image cap" runat="server" />
             <div class="card-body">
               <h5 class="card-title"> <b>Johann Goethe</b> </h5>
               <p class="card-text">CEO &amp; Founder</p>
@@ -181,7 +184,8 @@
           </div>
         </div>
         <div class="col-lg-3 col-6 p-3">
-          <div class="card"> <img class="card-img-top" src="img/08.jpg" alt="Card image cap">
+          <div class="card"> 
+              <asp:Image ID="CardImg05" class="card-img-top" src="../img/08.jpg" alt="Card image cap" runat="server" />
             <div class="card-body">
               <h5 class="card-title"> <b>George Wolf</b> </h5>
               <p class="card-text">CFO</p>
@@ -190,7 +194,8 @@
           </div>
         </div>
         <div class="col-lg-3 col-6 p-3">
-          <div class="card"> <img class="card-img-top" src="img/09.jpg" alt="Card image cap">
+          <div class="card"> 
+              <asp:Image ID="CardImg06" class="card-img-top" src="../img/09.jpg" alt="Card image cap" runat="server" />
             <div class="card-body">
               <h5 class="card-title"> <b>Jason Weismann</b> </h5>
               <p class="card-text">CTO</p>
@@ -199,7 +204,8 @@
           </div>
         </div>
         <div class="col-lg-3 col-6 p-3">
-          <div class="card"> <img class="card-img-top" src="img/12.jpg" alt="Card image cap">
+          <div class="card"> 
+              <asp:Image ID="CardImg07" class="card-img-top" src="../img/12.jpg" alt="Card image cap" runat="server" />
             <div class="card-body">
               <h5 class="card-title"> <b>Tyson von Ginzburg</b> </h5>
               <p class="card-text">Sales VP</p>

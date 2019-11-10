@@ -30,7 +30,7 @@
             
 
                         <!--Navbar -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark transparent fixed-top">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark transparent fixed-top">
      <p class="navbar-brand mb-0 text-white"><i class="fa d-inline fa-lg fa-stop-circle"></i> S I C O N </p>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
     aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,8 +38,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="Index.aspx">Inicio
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Inicio
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -47,12 +47,12 @@
         <a class="nav-link" href="#">Sobre nosotros</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Catalogo
         </a>
         <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="#">Proyectos</a>
-          <a class="dropdown-item" href="#">Trabajos</a>
+          <a class="dropdown-item" href="Catalog.aspx">Proyectos</a>
+          <a class="dropdown-item" href="Catalog.aspx">Trabajos</a>
         </div>
       </li>
     </ul>
@@ -74,8 +74,20 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-default"
           aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="Login.aspx">Inciar Sesión</a>
-          <a class="dropdown-item" href="#">Registrar</a>
+
+          <asp:Label ID="UserLbl" runat="server" Text="." class="dropdown-item"></asp:Label>
+            <div class="dropdown-divider"></div>
+
+          <asp:Button ID="UpdateBtn" runat="server" Text="Editar Perfil" class="dropdown-item"/>
+          <asp:Button ID="ControlBtn" runat="server" Text="Panel de control" class="dropdown-item" OnClick="ControlBtn_Click" />
+            
+            <asp:Button ID="IniciarBtn" runat="server" Text="Inciar Sesión" class="dropdown-item" OnClick="IniciarBtn_Click" />
+
+
+            <div class="dropdown-divider"></div>
+
+        <asp:Button ID="CerrarSesionBtn" runat="server" Text="Cerrar Sesión" class="dropdown-item" OnClick="CerrarSesionBtn_Click" />
+
         </div>
       </li>
     </ul>
@@ -89,7 +101,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <img class="img-fluid d-block" src="img/07.jpg">
+            <asp:Image ID="ProducImg01" class="card-img-top" src="../img/07.jpg" alt="Card image cap" runat="server" />
           <br>
           <%--<img class="img-fluid d-block" src="img/H-R/ho-s-1.jpg">
           <br>
