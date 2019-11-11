@@ -4,3 +4,6 @@ C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Bll\obj\Debug\SICON.Bll.csprojAs
 C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Bll\obj\Debug\SICON.Bll.csproj.CoreCompileInputs.cache
 C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Bll\obj\Debug\SICON.Bll.dll
 C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Bll\obj\Debug\SICON.Bll.pdb
+C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Bll\bin\Debug\SICON.Dll.dll
+C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Bll\bin\Debug\SICON.Dll.pdb
+C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Bll\obj\Debug\SICON.Bll.csproj.CopyComplete

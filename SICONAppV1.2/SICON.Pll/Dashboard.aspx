@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel='icon' type='image/png' href='img/logo.png'>
-    <title> S I C O N </title>
+    <title>Panel de control | S I C O N </title>
 
       <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

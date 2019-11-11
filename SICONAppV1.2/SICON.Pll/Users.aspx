@@ -49,7 +49,7 @@
           <i class="fas fa-user"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <asp:Button ID="UpdateBtn" runat="server" Text="Editar Perfil" class="dropdown-item"/>
+          <asp:Button ID="UpdateBtn" runat="server" Text="Editar Perfil" class="dropdown-item" OnClick="UpdateBtn_Click"/>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a>
         </div>
@@ -63,7 +63,7 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item ">
 
         <a class="nav-link" href="Dashboard.aspx">
           <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -91,7 +91,7 @@
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Custom Pagina</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span>Usuarios</span></a>
@@ -114,7 +114,28 @@
 
        <h1>Administrador de Usuarios</h1>
 
-        <asp:GridView ID="ViewUsers" runat="server"></asp:GridView>
+          <hr />
+
+          <h3>Usuario Seleccionada: <asp:Label ID="lblId" runat="server" Text="@Ejemplo  "></asp:Label><a class="dropdown-item" href="#" data-toggle="modal" data-target="#DeleteModal">Eliminar</a></h3>
+
+        <asp:GridView ID="ViewUsers" runat="server" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="ViewUsers_PageIndexChanging" OnSelectedIndexChanged="ViewUsers_SelectedIndexChanged">
+            <AlternatingRowStyle BackColor="#CCCCCC" />
+            <Columns>
+                
+                <asp:CommandField ButtonType="Link" ShowSelectButton="True" />
+                
+            </Columns>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="Gray" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
+          </asp:GridView>
+
+
 
       </div>
 
@@ -137,7 +158,8 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Logout Modal-->
+
+                <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -150,7 +172,27 @@
         <div class="modal-body">Selecciono "Cerrar Sesion" esta seguro de cerrar sesión.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <asp:Button ID="CerrarSesionBtn" runat="server" Text="Cerrar Sesión" class="btn btn-primary"/>
+            <asp:Button ID="Button1" runat="server" Text="Cerrar Sesión" class="btn btn-primary" OnClick="CerrarSesionBtn_Click"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                              
+  <!-- Logout Modal-->
+  <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¿De verdad quieres eliminar el usuario?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Esta seguro de eliminarlo.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <asp:Button ID="btnDelete" runat="server" Text="Eliminar" OnClick="btnDelete_Click" />
         </div>
       </div>
     </div>

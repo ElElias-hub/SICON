@@ -32,9 +32,9 @@
 					<asp:TextBox ID="txtApe" runat="server"></asp:TextBox>
 
 					<label for="">Contraseña</label>
-					<asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
+					<asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
 
-                    <asp:Button ID="btnEdit" type="submit" runat="server" Text="Editar Perfil" />
+                    <asp:Button ID="btnEdit" type="submit" runat="server" Text="Editar Perfil" OnClick="btnEdit_Click" />
 				</form>
 
 				<span class="text-footer">¿No quieres editar tu información?

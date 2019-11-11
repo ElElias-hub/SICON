@@ -114,3 +114,5 @@ C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Pll\obj\Debug\SICON.Pll.csproj.C
 C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Pll\obj\Debug\SICON.Pll.csproj.CopyComplete
 C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Pll\obj\Debug\SICON.Pll.dll
 C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Pll\obj\Debug\SICON.Pll.pdb
+C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Pll\bin\SICON.Bll.dll
+C:\Users\def00\Desktop\SICON\SICONAppV1.2\SICON.Pll\bin\SICON.Bll.pdb
