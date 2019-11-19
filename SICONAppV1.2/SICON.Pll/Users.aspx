@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-    <link rel='icon' type='image/png' href='img/logo.png'>
+      <link rel='icon' type='image/png' href='img/logo.png'>
     <title>Usuarios | S I C O N </title>
 
       <!-- Custom fonts for this template-->
@@ -18,16 +18,12 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
 
-
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
 
-            <div>
-
-            
-             <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+            <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
     <a class="navbar-brand mr-1" href="Index.aspx"><p class="navbar-brand mb-0 text-white"><i class="fa d-inline fa-lg fa-stop-circle"></i> S I C O N </p></a>
 
@@ -36,11 +32,9 @@
     </button>
 
     <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
         
       </div>
-    </form>
 
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
@@ -49,6 +43,7 @@
           <i class="fas fa-user"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="SICON/Index.aspx">Inicio</a>
           <asp:Button ID="UpdateBtn" runat="server" Text="Editar Perfil" class="dropdown-item" OnClick="UpdateBtn_Click"/>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesión</a>
@@ -59,6 +54,7 @@
   </nav>
 
 
+            
 <div id="wrapper">
 
     <!-- Sidebar -->
@@ -116,27 +112,68 @@
 
           <hr />
 
-          <h3>Usuario Seleccionada: <asp:Label ID="lblId" runat="server" Text="@Ejemplo  "></asp:Label><a class="dropdown-item" href="#" data-toggle="modal" data-target="#DeleteModal">Eliminar</a></h3>
+          <h3>Inserta un nuevo usuario/cliente: </h3>
+              
+              
+					<label for="">Nombre de Usuario</label>
+					<asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                  <br />
+					<label for="">Nombres</label>
+					<asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                  <br />
+					<label for="">Apellidos</label>
+					<asp:TextBox ID="txtApell" runat="server"></asp:TextBox>
+                  <br />
+					<label for="">Contraseña</label>
+					<asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
+                    <br />
+              <asp:Button ID="btnRegis" runat="server" Text="Insertar" class="btn btn-warning mt-3" OnClick="btnRegis_Click"/>
+          
+          <hr />
 
-        <asp:GridView ID="ViewUsers" runat="server" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnPageIndexChanging="ViewUsers_PageIndexChanging" OnSelectedIndexChanged="ViewUsers_SelectedIndexChanged">
-            <AlternatingRowStyle BackColor="#CCCCCC" />
-            <Columns>
-                
-                <asp:CommandField ButtonType="Link" ShowSelectButton="True" />
-                
-            </Columns>
-            <FooterStyle BackColor="#CCCCCC" />
-            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-            <SortedAscendingHeaderStyle BackColor="Gray" />
-            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-            <SortedDescendingHeaderStyle BackColor="#383838" />
+
+
+          <asp:GridView ID="ViewUsers" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="UserName" DataSourceID="SqlDataSourceSICON" ForeColor="Black" GridLines="Vertical">
+              <AlternatingRowStyle BackColor="#CCCCCC" />
+              <Columns>
+                  <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True">
+                  <ControlStyle BackColor="#FFC107" BorderStyle="None" />
+                  </asp:CommandField>
+                  <asp:BoundField DataField="UserName" HeaderText="UserName" ReadOnly="True" SortExpression="UserName" />
+                  <asp:BoundField DataField="PassWord" HeaderText="PassWord" SortExpression="PassWord" />
+                  <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                  <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" SortExpression="Apellidos" />
+                  <asp:BoundField DataField="TypeUser" HeaderText="TypeUser" SortExpression="TypeUser" />
+              </Columns>
+              <FooterStyle BackColor="#CCCCCC" />
+              <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+              <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+              <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+              <SortedAscendingCellStyle BackColor="#F1F1F1" />
+              <SortedAscendingHeaderStyle BackColor="Gray" />
+              <SortedDescendingCellStyle BackColor="#CAC9C9" />
+              <SortedDescendingHeaderStyle BackColor="#383838" />
           </asp:GridView>
 
 
 
+        
+          <asp:SqlDataSource ID="SqlDataSourceSICON" runat="server" ConnectionString="<%$ ConnectionStrings:SICONDBConnectionString %>" DeleteCommand="DELETE FROM Usuario WHERE (UserName = @Username)" SelectCommand="SELECT Usuario.* FROM Usuario" UpdateCommand="UPDATE Usuario SET PassWord = @PassWord, Apellidos = @Apellidos, Nombre = @Nombre, TypeUser = @TypeUser WHERE (UserName = @UserName)">
+              <DeleteParameters>
+                  <asp:Parameter Name="Username" />
+              </DeleteParameters>
+              <UpdateParameters>
+                  <asp:Parameter Name="Password" Type="String" />
+                  <asp:Parameter Name="Apellidos" Type="String" />
+                  <asp:Parameter Name="Nombre" Type="String" />
+                  <asp:Parameter Name="TypeUser" />
+                  <asp:Parameter Name="UserName" />
+              </UpdateParameters>
+          </asp:SqlDataSource>
+
+
+
+        
       </div>
 
       <!-- Sticky Footer -->
@@ -159,6 +196,8 @@
   </a>
 
 
+
+
                 <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -172,40 +211,20 @@
         <div class="modal-body">Selecciono "Cerrar Sesion" esta seguro de cerrar sesión.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <asp:Button ID="Button1" runat="server" Text="Cerrar Sesión" class="btn btn-primary" OnClick="CerrarSesionBtn_Click"/>
-        </div>
+            <asp:Button ID="CerrarSesionBtn" runat="server" Text="Cerrar Sesión" class="btn btn-primary" OnClick="CerrarSesionBtn_Click"  />
+       </div>
       </div>
     </div>
   </div>
 
-                              
-  <!-- Logout Modal-->
-  <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">¿De verdad quieres eliminar el usuario?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Esta seguro de eliminarlo.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <asp:Button ID="btnDelete" runat="server" Text="Eliminar" OnClick="btnDelete_Click" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-        </div>
 
         </div>
     </form>
 
-     
-      <!-- Bootstrap core JavaScript-->
+
+
+    
+          <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -223,15 +242,5 @@
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>
-
-
-    <script type="text/javascript">document.oncontextmenu = function(){return false}</script>
-  <script type="text/javascript">window.onload = function()
-// Para internet Explorer
-	  	{document.onselectstart = function(){return false;} 
-// Para Firefox
-		document.onmousedown = function(){return false;}}
-	</script>
-
 </body>
 </html>

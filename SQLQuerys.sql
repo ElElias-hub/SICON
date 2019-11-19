@@ -32,3 +32,23 @@ exec UpdateUser @Nombre='Elias' ,@Password=12345 ,@Apellidos='Corona Maldonado',
 Select * from usuario
 
 DELETE FROM Usuario WHERE UserName='ElElias';
+
+
+CREATE Procedure UpdateUserAdm
+@Name varchar(20),
+@Nombre varchar(20),
+@Password varchar(20),
+@Apellidos varchar(30),
+@Tipo int
+	as
+	Begin
+
+UPDATE Usuario
+   SET [PassWord] = @Password
+      ,[Nombre] = @Nombre
+      ,[Apellidos] = @Apellidos
+	  ,[TypeUser] = @Tipo
+WHERE UserName=@Name;
+
+	END
+Go

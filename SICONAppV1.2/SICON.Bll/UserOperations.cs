@@ -42,6 +42,18 @@ namespace SICON.Bll
             return sal;
         }
 
+
+        public Boolean UpdateUserAdm(string name, string pass, string apellidos, int tipo, string usu, ref string me)
+        {
+            Boolean sal = false;
+            SqlConnection Car = null;
+            Car = obj.OpenConnection(ref me);
+            string query = string.Format("exec UpdateUserAdm @Name'{0}', @Nombre='{1}' ,@Password='{2}' ,@Apellidos='{3}',@Tipo={4};", usu,name,pass,apellidos,tipo);
+            sal = obj.OP_ModBD(Car, query, ref me);
+
+            return sal;
+        }
+
         public Boolean DeleteUser(string user, ref string me)
         {
             Boolean sal = false;

@@ -18,10 +18,9 @@ namespace SICON.Pll
         {
             Response.Write("<script type='text/javascript'>" + "alert('" + mensaje + "'); </script>");
         }
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            ViewUser();
+
         }
 
         protected void CerrarSesionBtn_Click(object sender, EventArgs e)
@@ -37,41 +36,14 @@ namespace SICON.Pll
             Response.Redirect(@"EditProfile.aspx");
         }
 
-        public void ViewUser()
-        {
-            UserOperations uo = new UserOperations();
-            string me = "";
-            ViewUsers.DataSource = uo.ViewUsers(ref me);
-            ViewUsers.DataBind();
-        }
-
-        protected void ViewUsers_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            UserOperations uo = new UserOperations();
-            string me = "";
-
-            ViewUsers.PageIndex = e.NewPageIndex;
-            System.Data.DataTable tabla1 = null;
-            tabla1 = uo.ViewUsers(ref me);
-            ViewUsers.DataSource = tabla1;
-            ViewUsers.DataBind();
-        }
-
-        protected void ViewUsers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            GridViewRow fila = ViewUsers.SelectedRow;
-            lblId.Text = fila.Cells[1].Text+"  ";
-            
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
+        protected void btnRegis_Click(object sender, EventArgs e)
         {
             try
             {
+
                 UserOperations uo = new UserOperations();
                 string j = "";
-                uo.DeleteUser(lblId.Text, ref j);
+                uo.InsertUser(txtName.Text, txtApell.Text, txtPass.Text, txtUserName.Text, ref j);
                 Response.Redirect("Users.aspx");
             }
             catch (Exception v)
@@ -79,7 +51,5 @@ namespace SICON.Pll
                 Message(v.ToString());
             }
         }
-
-        
     }
 }
