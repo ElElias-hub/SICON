@@ -71,12 +71,16 @@
     <Content Include="EditProfile.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="Materials.aspx" />
+    <Content Include="NewProduct.aspx" />
+    <Content Include="Provider.aspx" />
     <Content Include="SICON\AboutUs.aspx" />
     <Content Include="SICON\Catalog.aspx" />
     <Content Include="SICON\Index.aspx" />
     <Content Include="SICON\Product.aspx" />
     <Content Include="SICON\Registro.aspx" />
     <Content Include="Users.aspx" />
+    <Content Include="ViewProducts.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -106,7 +110,28 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Materials.aspx.cs">
+      <DependentUpon>Materials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Materials.aspx.designer.cs">
+      <DependentUpon>Materials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewProduct.aspx.cs">
+      <DependentUpon>NewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewProduct.aspx.designer.cs">
+      <DependentUpon>NewProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider.aspx.cs">
+      <DependentUpon>Provider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Provider.aspx.designer.cs">
+      <DependentUpon>Provider.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SICON\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -148,6 +173,13 @@
     </Compile>
     <Compile Include="Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProducts.aspx.cs">
+      <DependentUpon>ViewProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewProducts.aspx.designer.cs">
+      <DependentUpon>ViewProducts.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

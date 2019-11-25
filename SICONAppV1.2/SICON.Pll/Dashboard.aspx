@@ -73,9 +73,11 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Productos :</h6> 
-          <a class="dropdown-item" href="">Agregar Productos</a>
-          <a class="dropdown-item" href="">Ver prodcutos</a>
-          <a class="dropdown-item" href="">Ordenes</a>
+          <a class="dropdown-item" href="NewProduct.aspx">Agregar Productos</a>
+          <a class="dropdown-item" href="ViewProducts.aspx">Ver prodcutos</a>
+          <a class="dropdown-item" href="">Ordenes/Ventas</a>
+            <a class="dropdown-item" href="Provider.aspx">Proveedores</a>
+            <a class="dropdown-item" href="Materials.aspx">Materiales</a>
           <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Catalogo:</h6>
           <a class="dropdown-item" href="">Catalogo</a>

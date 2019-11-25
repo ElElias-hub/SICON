@@ -31,7 +31,6 @@ exec UpdateUser @Nombre='Elias' ,@Password=12345 ,@Apellidos='Corona Maldonado',
 
 Select * from usuario
 
-DELETE FROM Usuario WHERE UserName='ElElias';
 
 
 CREATE Procedure UpdateUserAdm
@@ -52,3 +51,29 @@ WHERE UserName=@Name;
 
 	END
 Go
+
+Create view SelectMateriales as
+	(Select M.IdMaterial as Folio, M.Nombre_Mat as Material, C.Categoria, P.NombreP as Proveedor
+	From Material M inner join Categoria C
+	on M.Categoria=C.IdCategoria
+	inner join Proveedor P
+	on M.Proveedor=P.idProveedor
+	);
+Go
+
+select * from SelectMateriales
+
+
+CREATE Procedure DeleteMaterial
+@IdMaterial varchar(20)
+	as
+	Begin
+
+	DELETE FROM Material WHERE IdMaterial=@IdMaterial;
+
+	END
+Go
+
+exec  DeleteMaterial @IdMaterial=;
+
+
