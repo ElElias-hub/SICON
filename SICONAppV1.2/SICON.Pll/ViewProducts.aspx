@@ -114,39 +114,16 @@
        <h1>PRODUCTOS</h1>
           <hr />
             
-          <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AutoGenerateColumns="False" DataKeyNames="IdDiseño" DataSourceID="SqlDataSource1">
-              <AlternatingRowStyle BackColor="#CCCCCC" />
+          <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
               <Columns>
-                  <asp:BoundField DataField="IdDiseño" HeaderText="IdDiseño" ReadOnly="True" SortExpression="IdDiseño" />
-                  <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                  <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                  <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio" />
-                  <asp:BoundField DataField="Largo" HeaderText="Largo" SortExpression="Largo" />
-                  <asp:BoundField DataField="Ancho" HeaderText="Ancho" SortExpression="Ancho" />
-                  <asp:BoundField DataField="Alto" HeaderText="Alto" SortExpression="Alto" />
-                  <asp:BoundField DataField="Material" HeaderText="Material" SortExpression="Material" />
-
-                  
-                  <asp:TemplateField HeaderText="Imagen">
-                      <ItemTemplate>
-                          <asp:Image ID="Image1" runat="server" Height="50px" Width="50px" ImageUrl='<%#"data:image/jpg;base64,"+ Convert.ToBase64String((byte[])Eval("Imagen")) %>'/>
-                      </ItemTemplate>
-                  </asp:TemplateField>
+                  <asp:ImageField DataImageUrlField="Imagen" HeaderText="Imagen">
+                  </asp:ImageField>
               </Columns>
-              <FooterStyle BackColor="#CCCCCC" />
-              <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-              <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-              <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-              <SortedAscendingCellStyle BackColor="#F1F1F1" />
-              <SortedAscendingHeaderStyle BackColor="Gray" />
-              <SortedDescendingCellStyle BackColor="#CAC9C9" />
-              <SortedDescendingHeaderStyle BackColor="#383838" />
-             
           </asp:GridView>
                    
 
 
-          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SICONDBConnectionString %>" SelectCommand="SELECT * FROM [Diseño]"></asp:SqlDataSource>
+          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SICONDBConnectionString %>" SelectCommand="SELECT [Imagen] FROM [Diseño]"></asp:SqlDataSource>
                    
 
 
